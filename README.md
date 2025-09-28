@@ -50,26 +50,6 @@ Algoritmo que encuentra los caminos más cortos desde un nodo origen a todos los
 
 ### 3. Algoritmo de Floyd-Warshall
 **Archivo:** `floyd_warshall.py`
-
-#### Descripción
-Algoritmo de programación dinámica que encuentra los caminos más cortos entre todos los pares de nodos en un grafo ponderado.
-
-#### Características
-- **Complejidad temporal:** O(V³)
-- **Complejidad espacial:** O(V²)
-- **Garantiza:** Caminos óptimos entre todos los pares de nodos
-- **Uso:** Grafos densos, detección de ciclos negativos, análisis de conectividad
-
-#### Funcionamiento
-1. Inicializa una matriz de distancias con los pesos directos del grafo
-2. Para cada nodo k, considera si pasar por k mejora la distancia entre cualquier par (i,j)
-3. Actualiza la matriz si dist[i][k] + dist[k][j] < dist[i][j]
-4. Repite para todos los nodos como intermediarios
-
----
-
-## 🐍 Ejecución de los Algoritmos
-
 ### Prerrequisitos
 - Python 3.x instalado
 - Ninguna librería externa requerida (solo librerías estándar de Python)
@@ -113,20 +93,6 @@ Matriz de distancias mínimas:
 [2, 5, 7, 0]
 ```
 
----
-
-## 📊 Comparación de Algoritmos
-
-| Aspecto | BFS | Dijkstra | Floyd-Warshall |
-|---------|-----|----------|----------------|
-| **Tipo de grafo** | No ponderado | Ponderado (pesos ≥ 0) | Ponderado (cualquier peso) |
-| **Resultado** | Un camino | Distancias desde origen | Todas las distancias |
-| **Complejidad** | O(V + E) | O((V + E) log V) | O(V³) |
-| **Memoria** | O(V) | O(V) | O(V²) |
-| **Casos de uso** | Laberintos, redes sociales | GPS, routing | Planificación, análisis de redes |
-
----
-
 ## 🎯 Aplicaciones en Inteligencia Artificial
 
 ### BFS
@@ -149,14 +115,3 @@ Matriz de distancias mínimas:
 
 ---
 
-## 📝 Estructura del Proyecto
-
-```
-S6-PRACTICA-IA/
-├── bfs.py              # Implementación de BFS
-├── dijkstra.py         # Implementación de Dijkstra
-├── floyd_warshall.py   # Implementación de Floyd-Warshall
-└── README.md           # Este archivo
-```
-
----
